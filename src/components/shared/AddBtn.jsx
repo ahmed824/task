@@ -4,10 +4,9 @@ export default function AddBtn({ onClick }) {
   return (
     <button
       onClick={onClick}
-      className="w-full mt-4 cursor-pointer px-6 py-3 bg-[var(--main-color)] text-white rounded-lg shadow-md hover:bg-opacity-90 focus:ring-2 focus:ring-[var(--main-color)] focus:ring-opacity-50 transition-all duration-200 text-lg font-semibold"
+      className="w-full mt-4 cursor-pointer px-4 py-2 bg-white border-1 border-[var(--main-color)] text-[var(--main-color)] shadow-md hover:bg-[var(--main-color)] hover:text-white transition-all duration-200 text-lg font-semibold"
     >
       إضافة عنوان آخر
     </button>
   );
 }
-
