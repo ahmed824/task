@@ -16,7 +16,7 @@ export default function AddressTable({
   const [editingIndex, setEditingIndex] = useState(null);
 
   const handleEdit = (index) => {
-    setEditingIndex((prevIndex) => (prevIndex === index ? null : index));
+    setEditingIndex((prevIndex) => (prevIndex === index ? null : index)); // Toggle form on second click
   };
 
   return (
@@ -27,7 +27,7 @@ export default function AddressTable({
             <TableRowItem address={address} index={index} onEdit={handleEdit} onDelete={onDelete} />
             {editingIndex === index && (
               <div className="mt-2 rounded-md">
-                <AddressForm onClose={() => setEditingIndex(null)} onSave={onSave} initialValues={initialValues} mode="edit" />
+                <AddressForm onClose={() => setEditingIndex(null)} onSave={onSave} initialValues={address} mode="edit" />
               </div>
             )}
           </React.Fragment>
@@ -37,7 +37,7 @@ export default function AddressTable({
       )}
 
       {showForm && editingIndex === null && (
-        <div className="mt-2 bg-transparent ">
+        <div className="mt-2 bg-transparent">
           <AddressForm onClose={onClose} onSave={onSave} initialValues={initialValues} mode="add" />
         </div>
       )}
