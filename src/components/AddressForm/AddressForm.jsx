@@ -24,18 +24,16 @@ export default function AddressForm({ onClose, onSave, initialValues, mode }) {
   );
 
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-[#F9F9F9] shadow-md rounded-lg">
+    <div className="p-4 sm:p-6 bg-[#F9F9F9] shadow-md rounded-lg">
       <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
         {() => (
-          <Form className="grid grid-cols-2 gap-4">
+          <Form className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <InputField label="عنوان الموقع" name="siteTitle" placeholder="ادخل عنوان الموقع" />
             <InputField label="الاسم" name="name" placeholder="ادخل الاسم" />
             <InputField label="عنوان الشارع" name="streetAddress" placeholder="ادخل عنوان الشارع" />
             <InputField label="المدينة" name="city" placeholder="ادخل المدينة" />
             <InputField label="الرمز البريدي" name="postalCode" placeholder="ادخل الرمز البريدي (5 ارقام)" />
             <InputField label="الدولة" name="country" placeholder="ادخل الدولة" />
-
-            {/* Buttons */}
             <FormButtons onCancel={onClose} isLoading={isLoading} mode={mode} />
           </Form>
         )}
