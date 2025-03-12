@@ -1,14 +1,19 @@
 @import "tailwindcss";
-
 @plugin "tailwindcss-animate";
-
 @custom-variant dark (&:is(.dark *));
+@tailwind utilities;
 
 
 @font-face {
   font-family: "Somar Sans";
-  src: url("../../public/fonts/SomarSans-Regular.ttf") format("truetype");
+  src: url("/fonts/SomarSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
+body {
+  font-family: var(--font-somar-sans), sans-serif;
+  background-color: #f5f5f5;
 }
 
 :root {
@@ -165,6 +170,3 @@
 }
 
 
-body {
-  background-color: #F5F5F5;
-}

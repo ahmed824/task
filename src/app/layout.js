@@ -6,6 +6,8 @@ const somarSans = localFont({
   src: [
     {
       path: "../../public/fonts/SomarSans-Regular.ttf",
+      weight: "400", // Specify the font weight
+      style: "normal", // Specify the font style
     },
   ],
   variable: "--font-somar-sans",
@@ -15,9 +17,7 @@ const somarSans = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir="rtl">
-      <body
-        className={`${somarSans.variable}`}
-      >
+      <body className={`${somarSans.variable}`}>
         <Toaster position="top-center" richColors />
         {children}
       </body>
