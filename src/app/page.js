@@ -5,8 +5,8 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center min-h-screen px-6 sm:px-10 py-12 gap-12 sm:gap-16 font-[family-name:var(--font-geist-sans)]">
       {/* Heading */}
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 flex items-center gap-3 text-center">
-        Welcome to My Task
         <span className="inline-block wave-animation">👋</span>
+        Welcome to My Task
       </h1>
 
       {/* Button */}
