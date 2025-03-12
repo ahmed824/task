@@ -4,6 +4,13 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
+@font-face {
+  font-family: "Somar Sans";
+  src: url("../../public/fonts/SomarSans-Regular.ttf") format("truetype");
+
+}
+
 :root {
   --main-color: #9F702B;
   --background: oklch(1 0 0);
